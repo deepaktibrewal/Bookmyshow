@@ -30,8 +30,18 @@ h1 {
   display: inline-block;
 }
 
+.selected {
+  background: red;
+  color: #fff;
+  display: inline-block;
+}
+
 .reserved::after {
   content: 'RESERVED'
+}
+
+.selected::after {
+  content: 'SELECTED'
 }
 
 .available::after {
@@ -44,4 +54,8 @@ h1 {
 
 li {
   list-style: none;
+}
+
+.btnmargin{
+  margin-top: 15px;
 }

@@ -4,6 +4,7 @@ import '../stylesheets/Moviehall.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 import Bookseats from './Bookseats';
+import Seatbooking from './Seatbooking';
 
 export class HallForm extends React.Component {
 
@@ -102,7 +103,7 @@ export class HallForm extends React.Component {
       </div>
 
       <div>
-        {this.state.book ? <Bookseats /> : null }
+        {this.state.book ? <Seatbooking /> : null }
       </div>
       </div>
     )
