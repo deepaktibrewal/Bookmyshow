@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import '../stylesheets/seats.css';
-//import 'bootstrap/dist/css/bootstrap.css';
-//import 'bootstrap/dist/css/bootstrap-theme.css';
 
 class Seatbooking extends React.Component {
 
