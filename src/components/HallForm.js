@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import App from './App';
 import '../stylesheets/Moviehall.css';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/css/bootstrap-theme.css';
+//import 'bootstrap/dist/css/bootstrap.css';
+//import 'bootstrap/dist/css/bootstrap-theme.css';
 //import Bookseats from './Bookseats';
 import Seatbooking from './Seatbooking';
 
