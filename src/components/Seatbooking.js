@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import '../stylesheets/seats.css';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/css/bootstrap-theme.css';
+//import 'bootstrap/dist/css/bootstrap.css';
+//import 'bootstrap/dist/css/bootstrap-theme.css';
 
 class Seatbooking extends React.Component {
 
   constructor() {
     super();
-      this.state = {
+    this.state = {
       seat: [
         'A1','A2','A3','A4','A5','A6',
         'B1','B2','B3','B4','B5','B6',
@@ -38,7 +38,7 @@ class Seatbooking extends React.Component {
       })
     }
   }
-  checktrue(row){
+  checktrue(row) {
     if(this.state.seatSelected.indexOf(row) > -1){
       return false
     }else{
@@ -46,10 +46,10 @@ class Seatbooking extends React.Component {
     }
   }
 
-  handleSubmited(){
+  handleSubmited() {
     this.setState({seatSelected: this.state.seatSelected.concat(this.state.seatReserved)})
     this.setState({
-    seatReserved: []
+      seatReserved: []
     })
   }
 
@@ -65,7 +65,7 @@ class Seatbooking extends React.Component {
           onClickData={ this.onClickData.bind(this)}
           checktrue={ this.checktrue.bind(this)}
           handleSubmited={ this.handleSubmited.bind(this)}
-          />
+        />
       </div>
     )
   }
@@ -74,25 +74,25 @@ class Seatbooking extends React.Component {
 class DrawGrid extends React.Component {
   render() {
     return (
-       <div className="container">
+      <div className="container">
         <h2></h2>
         <table className="grid">
           <tbody>
-              <tr>
-                { this.props.seat.map( row =>
-                  <td
-                    className={this.props.selected.indexOf(row) > -1? 'reserved': (this.props.reserved.indexOf(row) > -1? 'selected':'available')}
-                    key={row} onClick={this.props.checktrue(row) ? e => this.onClickSeat(row) : null} >{row} </td>) }
-              </tr>
+            <tr>
+            { this.props.seat.map( row =>
+              <td
+              className={this.props.selected.indexOf(row) > -1? 'reserved': (this.props.reserved.indexOf(row) > -1? 'selected':'available')}
+              key={row} onClick={this.props.checktrue(row) ? e => this.onClickSeat(row) : null} >{row} </td>) }
+            </tr>
           </tbody>
         </table>
         <button type="button" className="btn-success btnmargin" onClick={() => this.props.handleSubmited()}>Confirm Booking</button>
-       </div>
-    )
-  }
+      </div>
+      )
+    }
 
-  onClickSeat(seat) {
-    this.props.onClickData(seat);
+    onClickSeat(seat) {
+      this.props.onClickData(seat);
+    }
   }
-}
-export default Seatbooking;
+  export default Seatbooking;
